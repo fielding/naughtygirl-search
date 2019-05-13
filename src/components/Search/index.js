@@ -49,11 +49,8 @@ export default () => {
           onFocus={showSearch}
           name="search"
           type="search"
-          placeholder=""
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
+          autoComplete="off"
+          spellCheck="false"
         />
         <SearchPrediction
           value={
