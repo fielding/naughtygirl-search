@@ -23,6 +23,7 @@
     "rxjs-compat": "^6.5.2"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
     "prettier": "^1.17.0"
   },
   "repository": {
