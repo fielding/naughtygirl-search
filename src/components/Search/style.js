@@ -122,13 +122,16 @@ export const SearchPrediction = styled(SearchInput)`
 export const Info = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 66%;
   min-width: 640px;
   max-width: 1000px;
   text-align: left;
   margin: auto;
+  margin-top: calc(40vh + 2em);
+  justify-content: center;
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 55em) {
     flex-direction: column;
     width: 100%;
     min-width: 300px;
@@ -136,22 +139,16 @@ export const Info = styled.div`
 `;
 
 export const Column = styled.div`
-  width: 50%;
-  max-width: 450px;
-  margin: calc(40vh + 2em) auto 0;
+  width: 450px;
+  flex-shrink: 0;
   text-align: left;
+  margin: 0 auto 0;
   pointer-events: none;
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 5em) {
     font-size: 0.85em;
-    width: 100%;
     margin-top: 1em;
     padding: 0 1em;
-    min-width: 300px;
-
-    :first-of-type {
-      margin-top: 40vh;
-    }
 
     @media (max-height: 45em) {
       :nth-of-type(2) {
@@ -159,30 +156,9 @@ export const Column = styled.div`
         visibility: hidden;
       }
     }
-
-    @media screen and (max-height: 24em) {
-      width: 100%;
-      max-width: unset;
-    }
   }
 
-  @media screen and (min-width: 40em) {
-    @media screen and (max-height: 31.25em) {
-      width: 100%;
-      max-width: unset;
-
-      :nth-of-type(2) {
-        display: none;
-        visibility: hidden;
-      }
-    }
-    @media screen and (max-height: 25em) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  @media screen and (max-height: 19em) {
+  @media screen and (max-height: 29em) {
     display: none;
     visibility: hidden;
   }
@@ -249,10 +225,12 @@ export const Results = styled.ul`
   -webkit-margin-before: 0.75em;
   -webkit-margin-after: 0.75em;
   -webkit-padding-start: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   ${transition}
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 55em) {
     @media screen and (max-height: 24em) {
       display: flex;
       justify-content: left;
@@ -260,7 +238,7 @@ export const Results = styled.ul`
     }
   }
 
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 55em) {
     @media screen and (max-height: 31.25em) {
       display: flex;
       justify-content: left;
@@ -281,21 +259,26 @@ export const ResultItem = styled.li`
     margin-right: 0.05em;
   }
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 55em) {
     @media screen and (max-height: 24em) {
       width: calc(50% - 1em);
     }
   }
 
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 55em) {
     @media screen and (max-height: 31.25em) {
       width: calc(50% - 1em);
-    
+    }
   }
 `;
 
 export const Headshot = styled.img`
   border-radius: 20%;
   width: 30%;
+  height: auto;
   filter: grayscale(25%);
+
+  @media screen and (max-width: 55em) {
+    width: 25%;
+  }
 `;
