@@ -275,7 +275,7 @@ export const ResultItem = styled.li`
 export const Headshot = styled.img`
   border-radius: 20%;
   width: 30%;
-  height: auto;
+  height: 30%;
   filter: grayscale(25%);
 
   @media screen and (max-width: 55em) {
